@@ -34,6 +34,22 @@ void update_time(byte secondes, byte minutes, byte heures, byte dows, byte doms,
   
 }
 
+byte decimal_hexa(byte decimal){ // fonction convertissant 
+                                  // un nombre decimal en hexa
+      
+  char dizaine = (decimal / 16) * 10;
+  char unite = decimal % 16;
+
+  return dizaine + unite;
+}
+
+byte hexa_decimal(byte hexa){// fonction convertissant 
+                                  // un nombre hexa en decimal
+  char dizaine = (hexa / 10) * 16;
+  char unite = hexa % 10;
+  return dizaine + unite;
+}
+
 
 
 void Clock(bool data){  // fonction verifiant l'etat du compteur de l'horloge
